@@ -9,9 +9,12 @@ def iterarCambiaPuerta(limite):
             cantidad_ganadas += 1
         else:
             cantidad_perdidas += 1
+
+    print("--------------")
     print("Iteracion de", limite, "veces cambiando de puerta")
-    print("Cantidad de veces que ganó:", cantidad_ganadas)
-    print("Cantidad de veces que perdió:", cantidad_perdidas)
+    print("Cantidad de veces que ganó:", cantidad_ganadas, ", Frecuencia relativa = ",cantidad_ganadas/limite, ", Porcentaje: ",int(cantidad_ganadas/limite*100),"%")
+    print("Cantidad de veces que perdió:", cantidad_perdidas, ", Frecuencia relativa = ",cantidad_perdidas/limite, ", Porcentaje: ",int(cantidad_perdidas/limite*100),"%")
+    print("--------------")
 
 def iterarNoCambiaPuerta(limite):
     cantidad_ganadas = 0
@@ -21,9 +24,12 @@ def iterarNoCambiaPuerta(limite):
             cantidad_ganadas += 1
         else:
             cantidad_perdidas += 1
+    
+    print("--------------")
     print("Iteracion de", limite, "veces sin cambiar de puerta")
-    print("Cantidad de veces que ganó:", cantidad_ganadas)
-    print("Cantidad de veces que perdió:", cantidad_perdidas)
+    print("Cantidad de veces que ganó:", cantidad_ganadas, ", Frecuencia relativa = ",cantidad_ganadas/limite, ", Porcentaje: ",int(cantidad_ganadas/limite*100),"%")
+    print("Cantidad de veces que perdió:", cantidad_perdidas, ", Frecuencia relativa = ",cantidad_perdidas/limite, ", Porcentaje: ",int(cantidad_perdidas/limite*100),"%")
+    print("--------------")
 
 iterarCambiaPuerta(1000)
 iterarCambiaPuerta(10000)
