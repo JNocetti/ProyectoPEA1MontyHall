@@ -78,18 +78,6 @@ def MontyHallCambiaPuerta():
 def MontyHallNoCambiaPuerta():
     puertas = crearPuertas()
     seleccion = random.randint(0, 2)
-    
-    puertas_sin_auto = []
-
-    for i in range(3):
-        if i != seleccion and puertas[i] == 0:
-            puertas_sin_auto.append(i)
-
-    if len(puertas_sin_auto) == 2:
-        # la funcion random.choice() elige un elemento aleatorio de una lista
-        puerta_abierta = random.choice(puertas_sin_auto)
-    else:
-        puerta_abierta = puertas_sin_auto[0]
 
     if puertas[seleccion] == 1:
         return True
